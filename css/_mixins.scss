@@ -1,0 +1,17 @@
+@mixin arrow($color, $fontSize) {
+  color: $color;
+  font-size: $fontSize;
+  content: ">";
+  position: absolute;
+  width: 12px;
+  height: 7.41px;
+  left: 0;
+  top: 12px;
+  font-weight: bold;
+}
+
+@mixin formatText($size, $color, $fonts) {
+  font-family: $font;
+  font-size: $size;
+  color: $color;
+}

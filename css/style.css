@@ -1,0 +1,85 @@
+.main-content {
+  margin: 0px 5%;
+}
+.main-content .nav-left {
+  width: 355px;
+}
+.main-content .nav-left .departments {
+  text-transform: capitalize;
+  font-weight: bold;
+  color: #2264d1;
+  font-family: Arial, Helvetica, sans-serif;
+  width: 80%;
+  border: 1px solid #9dc2ff;
+  text-align: center;
+  border-radius: 6px;
+  padding-top: 12px;
+  padding-bottom: 12px;
+  font-size: 24px;
+  position: relative;
+}
+.main-content .nav-left .departments::before {
+  position: absolute;
+  content: " ";
+  background-image: url("/images/icons/filter-variant.svg");
+  width: 2rem;
+  height: 2rem;
+  top: calc(50% - 0.59em);
+  left: 0px;
+  margin-left: 1rem;
+}
+.main-content .nav-left ul.list-category {
+  margin-left: 1rem;
+  margin-top: 2rem;
+}
+.main-content .nav-left ul.list-category,
+.main-content .nav-left ul.list-category ul.categories {
+  list-style: none;
+  padding-left: 1.2rem;
+}
+.main-content .nav-left ul.list-category li.item,
+.main-content .nav-left ul.list-category ul.categories li.item {
+  margin-top: 1rem;
+}
+.main-content .nav-left ul.list-category li.item div.content,
+.main-content .nav-left ul.list-category ul.categories li.item div.content {
+  font-size: 1rem;
+}
+.main-content .nav-left ul.list-category li.item div.content .title,
+.main-content .nav-left ul.list-category li.item div.content .caption,
+.main-content .nav-left ul.list-category ul.categories li.item div.content .title,
+.main-content .nav-left ul.list-category ul.categories li.item div.content .caption {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  letter-spacing: 1.5px;
+  text-transform: capitalize;
+}
+.main-content .nav-left ul.list-category li.item div.content .caption,
+.main-content .nav-left ul.list-category ul.categories li.item div.content .caption {
+  font-size: 0.8em;
+}
+.main-content .nav-left ul.list-category li.item div.content .caption::first-letter,
+.main-content .nav-left ul.list-category ul.categories li.item div.content .caption::first-letter {
+  text-transform: uppercase;
+}
+.main-content .nav-left ul.list-category li.item.btn,
+.main-content .nav-left ul.list-category ul.categories li.item.btn {
+  @functions format();
+  text-transform: capitalize;
+  padding: 5px 1rem;
+  font-weight: bold;
+}
+.main-content .nav-left .arrow {
+  position: relative;
+}
+.main-content .nav-left .arrow::before {
+  color: #76a9ff;
+  font-size: 15px;
+  content: ">";
+  position: absolute;
+  width: 12px;
+  height: 7.41px;
+  left: 0;
+  top: 12px;
+  font-weight: bold;
+}/*# sourceMappingURL=style.css.map */

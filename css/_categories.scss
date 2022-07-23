@@ -1,0 +1,40 @@
+ul.list-category {
+    margin-left: 1rem;
+    margin-top: 2rem;
+    &,
+    ul.categories {
+      list-style: none;
+      padding-left: 1.2rem;
+      li.item {
+        margin-top: 1rem;
+        div.content {
+          font-size: 1rem;
+          .title,
+          .caption {
+            margin: 0;
+            font-family: Arial, Helvetica, sans-serif;
+            letter-spacing: 1.5px;
+            text-transform: capitalize;
+          }
+          .caption {
+            font-size: 0.8em;
+            &::first-letter {
+              text-transform: uppercase;
+            }
+          }
+        }
+
+        &.btn {
+          @include formatText($txt-font-default,12px,$txt-color-blue);
+          text-transform: capitalize;
+          padding: 5px 1rem;
+          font-weight: bold;
+        }
+      }
+    } 
+
+
+
+
+
+  }
