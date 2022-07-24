@@ -4,8 +4,8 @@
   &::before {
     content: " ";
     background-color: $color;
-    -webkit-mask-image: url("../images/icons/arrow.svg");
-    mask-image: url("../images/icons/arrow.svg");
+    -webkit-mask-image: $icon-arrow;
+    mask-image: $icon-arrow;
     -webkit-mask-size: $size;
     mask-size: $size;
     -webkit-mask-repeat: no-repeat;

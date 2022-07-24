@@ -325,15 +325,15 @@
   margin: 0 18px;
   background-color: #787885;
 }
-.main-content .sections .header-section .nav-section .nav-pages .list .item .icon.icon-view-grip {
+.main-content .sections .header-section .nav-section .nav-pages .list .item .icon.icon-view-grid {
   padding-right: 18px;
-  -webkit-mask-image: url("../../images/icons/view-grid.svg");
-          mask-image: url("../../images/icons/view-grid.svg");
+  -webkit-mask-image: url("../images/icons/view-grid.svg");
+          mask-image: url("../images/icons/view-grid.svg");
 }
 .main-content .sections .header-section .nav-section .nav-pages .list .item .icon.icon-view-list {
   padding-right: 22px;
-  -webkit-mask-image: url("../../images/icons/view-list.svg");
-          mask-image: url("../../images/icons/view-list.svg");
+  -webkit-mask-image: url("../images/icons/view-list.svg");
+          mask-image: url("../images/icons/view-list.svg");
 }
 .main-content .sections .header-section .nav-section .nav-pages .list .item .icon:hover {
   background-color: #2979FF;

@@ -95,14 +95,14 @@
                     margin: 0 18px;
                     background-color: #787885;
 
-                    &.icon-view-grip {
+                    &.icon-view-grid {
                         padding-right: 18px;
-                        mask-image: url("../../images/icons/view-grid.svg");
+                        mask-image: $icon-view-grid;
                     }
 
                     &.icon-view-list {
                         padding-right: 22px;
-                        mask-image: url("../../images/icons/view-list.svg");
+                        mask-image: $icon-view-list;
                     }
 
                     &:hover {
