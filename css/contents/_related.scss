@@ -1,0 +1,25 @@
+.related {
+    margin-top: 43px;
+
+    .list {
+        list-style-type: none;
+        display: flex;
+        padding: 0;
+
+        .item {
+            @include formatText(16px, black, $txt-font-default);
+            margin-right: 1rem;
+            padding: 0.8rem 2rem;
+            border-radius: 60px;
+            background-color: #EDEDF0;
+            letter-spacing: 1px;
+            cursor: pointer;
+
+            &:first-child {
+                background-color: transparent;
+                padding: 0.8rem 0;
+            }
+        }
+    }
+
+}

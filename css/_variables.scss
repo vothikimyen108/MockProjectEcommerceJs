@@ -1,3 +1,17 @@
-$txt-color-blue: #2264d1;
-$txt-font-default: 'font-family: Arial, Helvetica, sans-serif;';
-$txt-size-default: 13px;
+// variables color
+$color-primary:#2264D1;
+$color-primary-light:#76a9ff;
+$color-black-light:#787885;
+$bg-primary-light:#EBF2FE;
+$color-transparent:rgba(255, 255, 255, 0);
+$bg-color-nav-pages:#EBF2FE;
+// variales font
+$txt-font-default: Arial, Helvetica, sans-serif;
+$txt-size-default: 1rem;
+
+//variable transform
+$rotate-0:0deg;
+$rotate-45:45deg;
+$rotate-90:90deg;
+$rotate-180:180deg;
+$rotate-360:360deg;

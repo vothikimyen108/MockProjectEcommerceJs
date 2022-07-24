@@ -1,62 +1,220 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-    <link href="css/style.css" rel="stylesheet" />
-  </head>
-  <body>
-    <main class="main-content">
-      <div class="nav-left">
-        <div class="departments">
-            departments
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
+  <link href="css/style.css" rel="stylesheet" />
+</head>
+
+<body>
+  <main class="main-content">
+    <nav class="nav-left">
+      <div class="departments">
+        departments
+      </div>
+      <ul class="categories list-category arrow arrow-close">
+        <li class="item all-categories">
+          <div class="content">
+            <p class="title">all categories</p>
+            <p class="caption">ecommerce patterns</p>
+          </div>
+          <ul class="categories arrow arrow-close cell-phones">
+            <li class="item">
+              <div class="content">
+                <p class="title">all categories</p>
+                <p class="caption">ecommerce patterns</p>
+              </div>
+              <ul class="categories arrow arrow-open cell-phones">
+                <li class="item">
+                  <div class="content">
+                    <p class="title">all categories</p>
+                    <p class="caption">ecommerce patterns</p>
+                  </div>
+                </li>
+                <li class="item">
+                  <div class="content">
+                    <p class="title">all categories</p>
+                  </div>
+                </li>
+                <li class="item">
+                  <div class="content">
+                    <p class="title">all categories</p>
+                  </div>
+                </li>
+                <li class="item show-more">
+                  <div class="content">
+                    <p class="title">all categories</p>
+                  </div>
+                </li>
+              </ul>
+            </li>
+            <li class="item">
+              <div class="content">
+                <p class="title">all categories</p>
+              </div>
+            </li>
+            <li class="item">
+              <div class="content">
+                <p class="title">all categories</p>
+              </div>
+            </li>
+            <li class="item">
+              <button class="btn arrow arrow-open">show more </button>
+            </li>
+            <li class="item">
+              <button class="btn">Expand</button>
+            </li>
+          </ul>
+        </li>
+      </ul>
+      <div class="filters">
+        <p class="title arrow collapsed arrow-open">Collapsed filters</p>
+        <div class="options">
+          <p class="title arrow arrow-open">Expanded Filters</p>
+          <ul class="list">
+            <li class="item">
+              <input name="recommentded" type="checkbox" id="recommentded">
+              <label for="recommentded">recommentded</label>
+            </li>
+            <li class="item">
+              <input name="recentlyadded" type="checkbox" id="recentlyadded">
+              <label for="recentlyadded">recently added</label>
+            </li>
+            <li class="item">
+              <input name="expiringsoon" type="checkbox" id="expiringsoon">
+              <label for="expiringsoon">expiring soon</label>
+            </li>
+
+          </ul>
         </div>
-        <ul class="categories list-category arrow arrow-close">
-          <li class="item all-categories">
-            <div class="content">
-              <p class="title">all categories</p>
-              <p class="caption">ecommerce patterns</p>
-            </div>
-            <ul class="categories arrow arrow-close cell-phones">
-              <li class="item">
-                <div class="content">
-                  <p class="title">all categories</p>
-                  <p class="caption">ecommerce patterns</p>
-                </div>
-                <ul class="categories arrow arrow-close cell-phones">
-                  <li class="item">
-                    <div class="content">
-                      <p class="title">all categories</p>
-                      <p class="caption">ecommerce patterns</p>
-                    </div>
-                  </li>
-                  <li class="item">
-                    <div class="content"><p class="title">all categories</p></div>
-                  </li>
-                  <li class="item">
-                    <div class="content"><p class="title">all categories</p></div>
-                  </li>
-                  <li class="item show-more">
-                    <div class="content"><p class="title">all categories</p></div>
-                  </li>
-                </ul>
-              </li>
-              <li class="item">
-                <div class="content"><p class="title">all categories</p></div>
-              </li>
-              <li class="item">
-                <div class="content"><p class="title">all categories</p></div>
-              </li>
-              <li class="item">
-                  <button class="btn">show more</button>
-              </li>
-            </ul>
-          </li>
-        </ul>
 
       </div>
-    </main>
-  </body>
+
+    </nav>
+
+    <section class="sections">
+      <header class="header-section">
+        <nav class="nav-section">
+          <div class="nav-sort">
+            <!-- <input type="hidden" name="token-csrf" value="" id="token-csrf" >  -->
+            <div class="sort form-select">
+              <label for="sort-by" class="form-label">sort by</label>
+              <select name="sortBy" id="sort-by">
+                <option value="price">Price</option>
+                <option value="most_popular">Most Popular</option>
+                <option value="">Useless first</option>
+                <option value="">Useful first</option>
+              </select>
+            </div>
+            <div class="form-select">
+              <select name="sort-conditions" id="sort-conditions" class="sort-condition">
+                <option value="">Condition</option>
+                <option value="asc">Asc</option>
+                <option value="desc">Desc</option>
+              </select>
+            </div>
+            <div class="form-select">
+              <select name="sort-delivery" id="sort-delivery" class="sort-delivery ">
+                <option value="">Delivery options</option>
+                <option value="asc">Viettel Post</option>
+                <option value="desc">Tiki Now</option>
+              </select>
+            </div>
+
+          </div>
+          <div class="nav-pages">
+            <div class="pages">
+              <ul class="list">
+                <li class="item ">Show all</li>
+                <li class="item ">Auction</li>
+                <li class="item activate">Buy now</li>
+              </ul>
+
+            </div>
+            <div class="views">
+              <ul class="list">
+                <li class="view-list item activate" id="view-list">
+                  <i class="icon icon-view-list"></i>
+                </li>
+                <li class="item view-grip" id="view-grip">
+                  <i class="icon icon-view-grip"></i>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+        <div class="related">
+
+          <ul class="labels list">
+            <li class="item">Related</li>
+            <li class="item">worldwide shipping</li>
+            <li class="item">under $50</li>
+            <li class="item">kitten</li>
+            <li class="item">plastic plugs</li>
+            <li class="item">pucker shoes</li>
+            <li class="item">vintage typewriter</li>
+          </ul>
+        </div>
+      </header>
+      <main class="main-section">
+        <ul class="products" id="products">
+          <li class="product-item">
+            <div class="product-item-info">
+              <div class="product-photo-wrapper">
+                <a href="" title="">
+                  <picture>
+                    <source />
+                    <img class="image" src="images/products/Image.png" alt="" />
+                  </picture>
+                </a>
+
+              </div>
+              <div class="product-item-details">
+
+                <div class="product-item-description">
+                  <h3 class="description">Professional teadrinking set for every designer and developer</h3>
+                </div>
+
+                <div class="product-item-price">
+                  <p class="product-price">
+                    <span class="currency">$</span><span class="money">49.50</span>
+                  </p>
+                  <p class="discount">50%</p>
+                </div>
+
+                <div class="product-item-note">
+                  <p> shifting available
+                    Buyers protection possible!
+                  </p>
+                </div>
+
+                <div class="product-item-reviews">
+
+                  <div class="rating-stars">
+                    <ul class="star"></ul>
+                    <div class="point-number">4.9
+                    </div>
+                  </div>
+
+                  <button class="watch">
+                    <i class="icon icon-heart"></i>
+                    <span>watch</span>
+                  </button>
+                </div>
+              </div>
+
+          </li>
+
+        </ul>
+      </main>
+    </section>
+
+
+
+  </main>
+</body>
+
 </html>

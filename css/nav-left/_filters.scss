@@ -1,0 +1,72 @@
+div.filters {
+    margin-top: 4rem;
+    width: 80%;
+
+    p.title {
+        @include formatText($txt-size-default, black, $txt-font-default);
+        letter-spacing: 0.8px;
+        font-weight: 400;
+        margin: 0px;
+        padding: 15px;
+
+        &.arrow {
+            @include arrow(right, calc(50% - 7.5px), 1.7em, 15px, 15px, $color-primary-light, 100%, $rotate-90);
+        }
+    }
+
+    .collapsed {
+        box-shadow: 0px 3px 4px 1px #cacacd;
+        border-radius: 5px;
+
+        &.arrow.arrow-open {
+            &::before {
+                top: calc(50% - 10px);
+                transform: rotate($rotate-180);
+                background-color: $color-primary;
+            }
+        }
+    }
+
+    div.options {
+        margin-top: 2rem;
+        border-radius: 3px;
+        background-color: #F3F5F9;
+
+        & .arrow {
+            &::before {
+                background-color: $color-black-light;
+            }
+
+            &.arrow-open {
+                &::before {
+                    top: calc(50% - 6.5px);
+                    transform: rotate($rotate-0);
+                    background-color: $color-black-light;
+                }
+            }
+        }
+
+        & .list {
+            margin: 0;
+            list-style: none;
+            padding: 1rem;
+            padding-top: 0px;
+
+            & .item {
+                margin-top: 1.5rem;
+                @include formatText($txt-size-default, black, $txt-font-default);
+                text-transform: capitalize;
+                letter-spacing: 1px;
+
+                & label {
+                    margin-left: 12px;
+                }
+
+                & input {
+                    @include styleCheckbox ();
+                }
+            }
+        }
+    }
+
+}

@@ -1,17 +1,69 @@
-@mixin arrow($color, $fontSize) {
-  color: $color;
-  font-size: $fontSize;
-  content: ">";
-  position: absolute;
-  width: 12px;
-  height: 7.41px;
-  left: 0;
-  top: 12px;
-  font-weight: bold;
+@mixin arrow($direction, $top, $position, $width, $height, $color, $size, $rotate) {
+  position: relative;
+
+  &::before {
+    content: " ";
+    background-color: $color;
+    -webkit-mask-image: url("../images/icons/arrow.svg");
+    mask-image: url("../images/icons/arrow.svg");
+    -webkit-mask-size: $size;
+    mask-size: $size;
+    -webkit-mask-repeat: no-repeat;
+    mask-repeat: no-repeat;
+    position: absolute;
+    width: $width;
+    height: $height;
+    #{$direction}: $position;
+    top: $top;
+    font-weight: bold;
+    transform: rotate($rotate);
+  }
+
 }
 
 @mixin formatText($size, $color, $fonts) {
-  font-family: $font;
+  font-family: $fonts;
   font-size: $size;
   color: $color;
+}
+
+@mixin styleCheckbox {
+  &[type="checkbox"] {
+    display: none;
+    margin: 0px;
+    padding: 0px;
+    border: 0;
+    cursor: pointer;
+
+    &+label {
+      cursor: pointer;
+      &::before {
+        content: " ";
+        color: $color-primary;
+        height: 20px;
+        width: 20px;
+        display: inline-block;
+        text-align: center;
+        font-weight: 900;
+        vertical-align: middle;
+        margin-right: 16px;
+        font-size: 19px;
+        cursor: pointer;
+        border: 2px solid #535663;
+        border-radius: 5px;
+      }
+    }
+
+    &[type="checkbox"]:checked+label::before {
+      content: "√";
+    }
+
+  }
+
+}
+
+@mixin resetList {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
 }

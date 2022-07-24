@@ -1,0 +1,67 @@
+ul.list-category {
+    margin-left: 1rem;
+    margin-top: 2rem;
+    &,
+    ul.categories {
+      list-style: none;
+      padding-left: 1.2rem;
+      &.arrow {
+        @include arrow(left,10px,-13px,12px,12px,$color-primary-light, 100%,$rotate-90);
+        &.arrow-open{
+          &::before{
+            transform: rotate($rotate-180);
+            background-color: $color-primary;
+            top: 8px;
+          }
+        }
+
+      }
+      li.item {
+        cursor: pointer;
+        margin-top: 1rem;
+        div.content {
+          font-size: 1rem;
+          .title,
+          .caption {
+            margin: 0;
+            font-family: Arial, Helvetica, sans-serif;
+            letter-spacing: 1.5px;
+            text-transform: capitalize;
+
+          }
+          .caption {
+            font-size: 0.8em;
+            color: #9A9AA4;
+            &::first-letter {
+              text-transform: uppercase;
+            }
+          }
+        }
+
+        & .btn {
+          @include formatText(14px,$color-primary,$txt-font-default);
+          text-transform: capitalize;
+          line-height: 14px;
+          font-weight: bold;
+          border: none;
+          border-radius: 5px;
+          background-color: $bg-primary-light;
+          padding: 1rem 1rem;
+          letter-spacing: 0.75px;
+          width: 50%;
+          text-align: left;
+          &.arrow {
+          
+            @include arrow(right,calc(50% - 6px),20px,12px,12px,$color-black-light,100%,$rotate-90);
+            &.arrow-open{
+              &::before{
+                top: calc(50% - 8px);
+                transform: rotate($rotate-180);
+              }
+            }
+            
+          }
+        }
+      }
+    } 
+  }
