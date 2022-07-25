@@ -1,21 +1,24 @@
 .sections {
-    width: 100%;
-    padding: 1rem;
-    border-radius: 6px;
-    box-shadow: 0px 0px 9px -3px #5e6366;
+  width: 100%;
+  padding: 1rem;
+  border-radius: 6px;
+  box-shadow: 0px 0px 9px -3px #5e6366;
 
-    .header-section {
+  .header-section {
+    @import "nav-section";
 
-        @import 'nav-section';
+    @import "related";
+  }
 
-        @import 'related';
-
-       
-    }
-
-    .main-section{
-        @import 'products';
-    }
-
-
+  .main-section {
+    @import "products";
+  }
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+//   font-family: "Inter";
+//   font-style: normal;
+  font-size: 16px;
 }
