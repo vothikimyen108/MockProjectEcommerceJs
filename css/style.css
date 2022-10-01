@@ -139,6 +139,12 @@
   top: calc(50% - 8px);
   transform: rotate(180deg);
 }
+.main-content .nav-left ul.list-category li.item .expand,
+.main-content .nav-left ul.list-category ul.categories li.item .expand {
+  text-align: center;
+  width: 30%;
+  font-size: 14px;
+}
 .main-content .nav-left div.filters {
   margin-top: 4rem;
   width: 80%;
