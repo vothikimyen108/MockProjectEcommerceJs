@@ -8,7 +8,7 @@
   <title>Document</title>
   <link href="css/style.css" rel="stylesheet" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-
+  <script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
 
 
 </head>
@@ -19,86 +19,16 @@
       <div class="departments">
         departments
       </div>
-      <ul class="categories list-category arrow arrow-open">
+      <ul class="categories list-category arrow arrow-open" >
         <li class="item all-categories">
           <div class="content">
             <p class="title">all categories</p>
             <p class="caption">ecommerce patterns</p>
           </div>
-          <ul class="categories arrow arrow-open  ">
-            <li class="item">
-              <div class="content">
-                <p class="title">all categories</p>
-                <p class="caption">ecommerce patterns</p>
-              </div>
-              <ul class="categories arrow arrow-open  ">
-                <li class="item">
-                  <div class="content">
-                    <p class="title">all categories</p>
-                    <p class="caption">ecommerce patterns</p>
-                  </div>
-                </li>
-                <li class="item">
-                  <div class="content">
-                    <p class="title">all categories</p>
-                  </div>
-                </li>
-                <li class="item">
-                  <div class="content">
-                    <p class="title">all categories</p>
-                  </div>
-                </li>
-                <li class="item show-more">
-                  <div class="content">
-                    <p class="title">all categories</p>
-                  </div>
-                </li>
-              </ul>
-            </li>
-            <li class="item">
-              <button class="btn arrow arrow-open">show more </button>
-            </li>
+          <ul class="categories" id="list-category">            
           </ul>
         </li>
-        <li class="item">
-          <ul class="categories arrow arrow-open  ">
-            <li class="item">
-              <div class="content">
-                <p class="title">all categories</p>
-                <p class="caption">ecommerce patterns</p>
-              </div>
-              <ul class="categories arrow arrow-close  ">
-                <li class="item">
-                  <div class="content">
-                    <p class="title">all categories</p>
-                    <p class="caption">ecommerce patterns</p>
-                  </div>
-                </li>
-              </ul>
-            </li>
-          </ul>
-        </li>
-        <li class="item">
-          <ul class="categories arrow arrow-open    ">
-            <li class="item">
-              <div class="content">
-                <p class="title">all categories</p>
-                <p class="caption">ecommerce patterns</p>
-              </div>
-              <ul class="categories arrow arrow-close  ">
-                <li class="item">
-                  <div class="content">
-                    <p class="title">all categories</p>
-                    <p class="caption">ecommerce patterns</p>
-                  </div>
-                </li>
-              </ul>
-            </li>
-          </ul>
-        </li>
-        <li class="item">
-          <button class="btn expand">Expand</button>
-        </li>
+
       </ul>
 
 
@@ -132,14 +62,11 @@
       <header class="header-section">
         <nav class="nav-section">
           <div class="nav-sort">
-            <!-- <input type="hidden" name="token-csrf" value="" id="token-csrf" >  -->
             <div class="sort form-select">
               <label for="sort-by" class="form-label">sort by</label>
               <select name="sortBy" id="sort-by">
                 <option value="price">Price</option>
                 <option value="most_popular">Most Popular</option>
-                <option value="">Useless first</option>
-                <option value="">Useful first</option>
               </select>
             </div>
             <div class="form-select">
@@ -156,12 +83,11 @@
                 <option value="desc">Tiki Now</option>
               </select>
             </div>
-
           </div>
           <div class="nav-pages">
             <div class="pages">
-              <ul class="list">
-                <li class="item ">Show all</li>
+              <ul class="list" >
+                <li class="item " onclick="onClickShowAll(event)" >Show all</li>
                 <li class="item ">Auction</li>
                 <li class="item activate">Buy now</li>
               </ul>
@@ -179,422 +105,20 @@
             </div>
           </div>
         </nav>
-        <div class="related">
-
-          <ul class="labels list">
+        <div class="related" >
+          <ul class="labels list" id="related">
             <li class="item">Related</li>
-            <li class="item">worldwide shipping</li>
-            <li class="item">under $50</li>
-            <li class="item">kitten</li>
-            <li class="item">plastic plugs</li>
-            <li class="item">pucker shoes</li>
-            <li class="item">vintage typewriter</li>
+           
           </ul>
         </div>
       </header>
       <main class="main-section">
         <ul class="products" id="products">
-          <li class="product-item">
-            <div class="product-item-info">
-              <div class="product-photo-wrapper">
-                <a href="" title="">
-                  <picture>
-                    <source />
-                    <img class="image" src="images/products/Image.png" alt="" />
-                  </picture>
-                </a>
-
-              </div>
-              <div class="product-item-details">
-
-                <div class="product-item-description">
-                  <h3 class="description">Lee Pucker design. Leather botinki for handsome designers. Free shipping.</h3>
-                </div>
-                <div class="product-item-price">
-                  <p class="product-price">
-                    <span class="currency">$</span><span class="money">49.50</span>
-                  </p>
-                  <p class="discount">50% OFF</p>
-                </div>
-
-                <div class="product-item-note">
-                  <p> shifting available
-                    Buyers protection possible!
-                  </p>
-                </div>
-
-                <div class="product-item-reviews">
-
-                  <div class="rating-stars">
-                    <ul class="star">                  
-                      <li><i class="fas fa-star"></i></li>
-                      <li><i class="fas fa-star"></i></li>
-                      <li><i class="fas fa-star"></i></li>
-                      <li><i class="fas fa-star"></i></li>
-                      <li><i class="fas fa-star-half-alt"></i></li>
-                    </ul>
-                    <span class="point-number">4.9
-                    </span>
-                  </div>
-                  <button class="watch">
-                    <i class="fas fa-heart"></i>
-                    <span>Watch</span>
-                  </button>
-                </div>
-              </div>
-          </li>
-          <li class="product-item">
-            <div class="product-item-info">
-              <div class="product-photo-wrapper">
-                <a href="" title="">
-                  <picture>
-                    <source />
-                    <img class="image" src="images/products/Image.png" alt="" />
-                  </picture>
-                </a>
-
-              </div>
-              <div class="product-item-details">
-
-                <div class="product-item-description">
-                  <h3 class="description">Lee Pucker design. Leather botinki for handsome designers. Free shipping.</h3>
-                </div>
-                <div class="product-item-price">
-                  <p class="product-price">
-                    <span class="currency">$</span><span class="money">49.50</span>
-                  </p>
-                  <p class="discount">50% OFF</p>
-                </div>
-
-                <div class="product-item-note">
-                  <p> shifting available
-                    Buyers protection possible!
-                  </p>
-                </div>
-
-                <div class="product-item-reviews">
-
-                  <div class="rating-stars">
-                    <ul class="star">                  
-                      <li><i class="fas fa-star"></i></li>
-                      <li><i class="fas fa-star"></i></li>
-                      <li><i class="fas fa-star"></i></li>
-                      <li><i class="fas fa-star"></i></li>
-                      <li><i class="fas fa-star-half-alt"></i></li>
-                    </ul>
-                    <span class="point-number">4.9
-                    </span>
-                  </div>
-                  <button class="watch">
-                    <i class="fas fa-heart"></i>
-                    <span>Watch</span>
-                  </button>
-                </div>
-              </div>
-          </li>
-          <li class="product-item">
-            <div class="product-item-info">
-              <div class="product-photo-wrapper">
-                <a href="" title="">
-                  <picture>
-                    <source />
-                    <img class="image" src="images/products/Image.png" alt="" />
-                  </picture>
-                </a>
-
-              </div>
-              <div class="product-item-details">
-
-                <div class="product-item-description">
-                  <h3 class="description">Lee Pucker design. Leather botinki for handsome designers. Free shipping.</h3>
-                </div>
-                <div class="product-item-price">
-                  <p class="product-price">
-                    <span class="currency">$</span><span class="money">49.50</span>
-                  </p>
-                  <p class="discount">50% OFF</p>
-                </div>
-
-                <div class="product-item-note">
-                  <p> shifting available
-                    Buyers protection possible!
-                  </p>
-                </div>
-
-                <div class="product-item-reviews">
-
-                  <div class="rating-stars">
-                    <ul class="star">                  
-                      <li><i class="fas fa-star"></i></li>
-                      <li><i class="fas fa-star"></i></li>
-                      <li><i class="fas fa-star"></i></li>
-                      <li><i class="fas fa-star"></i></li>
-                      <li><i class="fas fa-star-half-alt"></i></li>
-                    </ul>
-                    <span class="point-number">4.9
-                    </span>
-                  </div>
-                  <button class="watch">
-                    <i class="fas fa-heart"></i>
-                    <span>Watch</span>
-                  </button>
-                </div>
-              </div>
-          </li>
-          <li class="product-item">
-            <div class="product-item-info">
-              <div class="product-photo-wrapper">
-                <a href="" title="">
-                  <picture>
-                    <source />
-                    <img class="image" src="images/products/Image.png" alt="" />
-                  </picture>
-                </a>
-
-              </div>
-              <div class="product-item-details">
-
-                <div class="product-item-description">
-                  <h3 class="description">Lee Pucker design. Leather botinki for handsome designers. Free shipping.</h3>
-                </div>
-                <div class="product-item-price">
-                  <p class="product-price">
-                    <span class="currency">$</span><span class="money">49.50</span>
-                  </p>
-                  <p class="discount">50% OFF</p>
-                </div>
-
-                <div class="product-item-note">
-                  <p> shifting available
-                    Buyers protection possible!
-                  </p>
-                </div>
-
-                <div class="product-item-reviews">
-
-                  <div class="rating-stars">
-                    <ul class="star">                  
-                      <li><i class="fas fa-star"></i></li>
-                      <li><i class="fas fa-star"></i></li>
-                      <li><i class="fas fa-star"></i></li>
-                      <li><i class="fas fa-star"></i></li>
-                      <li><i class="fas fa-star-half-alt"></i></li>
-                    </ul>
-                    <span class="point-number">4.9
-                    </span>
-                  </div>
-                  <button class="watch">
-                    <i class="fas fa-heart"></i>
-                    <span>Watch</span>
-                  </button>
-                </div>
-              </div>
-          </li>
-          <li class="product-item">
-            <div class="product-item-info">
-              <div class="product-photo-wrapper">
-                <a href="" title="">
-                  <picture>
-                    <source />
-                    <img class="image" src="images/products/Image.png" alt="" />
-                  </picture>
-                </a>
-
-              </div>
-              <div class="product-item-details">
-
-                <div class="product-item-description">
-                  <h3 class="description">Lee Pucker design. Leather botinki for handsome designers. Free shipping.</h3>
-                </div>
-                <div class="product-item-price">
-                  <p class="product-price">
-                    <span class="currency">$</span><span class="money">49.50</span>
-                  </p>
-                  <p class="discount">50% OFF</p>
-                </div>
-
-                <div class="product-item-note">
-                  <p> shifting available
-                    Buyers protection possible!
-                  </p>
-                </div>
-
-                <div class="product-item-reviews">
-
-                  <div class="rating-stars">
-                    <ul class="star">                  
-                      <li><i class="fas fa-star"></i></li>
-                      <li><i class="fas fa-star"></i></li>
-                      <li><i class="fas fa-star"></i></li>
-                      <li><i class="fas fa-star"></i></li>
-                      <li><i class="fas fa-star-half-alt"></i></li>
-                    </ul>
-                    <span class="point-number">4.9
-                    </span>
-                  </div>
-                  <button class="watch">
-                    <i class="fas fa-heart"></i>
-                    <span>Watch</span>
-                  </button>
-                </div>
-              </div>
-          </li>
-          <li class="product-item">
-            <div class="product-item-info">
-              <div class="product-photo-wrapper">
-                <a href="" title="">
-                  <picture>
-                    <source />
-                    <img class="image" src="images/products/Image.png" alt="" />
-                  </picture>
-                </a>
-
-              </div>
-              <div class="product-item-details">
-
-                <div class="product-item-description">
-                  <h3 class="description">Lee Pucker design. Leather botinki for handsome designers. Free shipping.</h3>
-                </div>
-                <div class="product-item-price">
-                  <p class="product-price">
-                    <span class="currency">$</span><span class="money">49.50</span>
-                  </p>
-                  <p class="discount">50% OFF</p>
-                </div>
-
-                <div class="product-item-note">
-                  <p> shifting available
-                    Buyers protection possible!
-                  </p>
-                </div>
-
-                <div class="product-item-reviews">
-
-                  <div class="rating-stars">
-                    <ul class="star">                  
-                      <li><i class="fas fa-star"></i></li>
-                      <li><i class="fas fa-star"></i></li>
-                      <li><i class="fas fa-star"></i></li>
-                      <li><i class="fas fa-star"></i></li>
-                      <li><i class="fas fa-star-half-alt"></i></li>
-                    </ul>
-                    <span class="point-number">4.9
-                    </span>
-                  </div>
-                  <button class="watch">
-                    <i class="fas fa-heart"></i>
-                    <span>Watch</span>
-                  </button>
-                </div>
-              </div>
-          </li>
-          
-          
-          <li class="product-item">
-            <div class="product-item-info">
-              <div class="product-photo-wrapper">
-                <a href="" title="">
-                  <picture>
-                    <source />
-                    <img class="image" src="images/products/Image.png" alt="" />
-                  </picture>
-                </a>
-
-              </div>
-              <div class="product-item-details">
-
-                <div class="product-item-description">
-                  <h3 class="description">Lee Pucker design. Leather botinki for handsome designers. Free shipping.</h3>
-                </div>
-                <div class="product-item-price">
-                  <p class="product-price">
-                    <span class="currency">$</span><span class="money">49.50</span>
-                  </p>
-                  <p class="discount">50% OFF</p>
-                </div>
-
-                <div class="product-item-note">
-                  <p> shifting available
-                    Buyers protection possible!
-                  </p>
-                </div>
-
-                <div class="product-item-reviews">
-
-                  <div class="rating-stars">
-                    <ul class="star">                  
-                      <li><i class="fas fa-star"></i></li>
-                      <li><i class="fas fa-star"></i></li>
-                      <li><i class="fas fa-star"></i></li>
-                      <li><i class="fas fa-star"></i></li>
-                      <li><i class="fas fa-star-half-alt"></i></li>
-                    </ul>
-                    <span class="point-number">4.9
-                    </span>
-                  </div>
-                  <button class="watch">
-                    <i class="fas fa-heart"></i>
-                    <span>Watch</span>
-                  </button>
-                </div>
-              </div>
-          </li>
-          <li class="product-item">
-            <div class="product-item-info">
-              <div class="product-photo-wrapper">
-                <a href="" title="">
-                  <picture>
-                    <source />
-                    <img class="image" src="images/products/Image.png" alt="" />
-                  </picture>
-                </a>
-
-              </div>
-              <div class="product-item-details">
-
-                <div class="product-item-description">
-                  <h3 class="description">Lee Pucker design. Leather botinki for handsome designers. Free shipping.</h3>
-                </div>
-                <div class="product-item-price">
-                  <p class="product-price">
-                    <span class="currency">$</span><span class="money">49.50</span>
-                  </p>
-                  <p class="discount">50% OFF</p>
-                </div>
-
-                <div class="product-item-note">
-                  <p> shifting available
-                    Buyers protection possible!
-                  </p>
-                </div>
-
-                <div class="product-item-reviews">
-
-                  <div class="rating-stars">
-                    <ul class="star">                  
-                      <li><i class="fas fa-star"></i></li>
-                      <li><i class="fas fa-star"></i></li>
-                      <li><i class="fas fa-star"></i></li>
-                      <li><i class="fas fa-star"></i></li>
-                      <li><i class="fas fa-star-half-alt"></i></li>
-                    </ul>
-                    <span class="point-number">4.9
-                    </span>
-                  </div>
-                  <button class="watch">
-                    <i class="fas fa-heart"></i>
-                    <span>Watch</span>
-                  </button>
-                </div>
-              </div>
-          </li>
-          
-
         </ul>
       </main>
     </section>
 
   </main>
 </body>
-
+<script src="./js/products.js"></script>
 </html>
