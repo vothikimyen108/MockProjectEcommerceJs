@@ -122,7 +122,6 @@ const request = (url) => {
 }
 
 const onClickCategory = (e)=>{
-    debugger
     let catagoryName = $(e.currentTarget ).data("name");
     let updateData = async () => {
         let items = await request(URL.productByCategory(catagoryName))
@@ -179,8 +178,6 @@ async function main() {
     })
 
     $(".all-categories").click(onClickShowAll)
-    
-    
 }
 
 main();
