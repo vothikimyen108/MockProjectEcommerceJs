@@ -1,6 +1,5 @@
 @charset "UTF-8";
 .main-content {
-  margin: 0px 5%;
   display: flex;
 }
 .main-content .nav-left {
@@ -371,6 +370,7 @@
   background-color: #EDEDF0;
   letter-spacing: 1px;
   cursor: pointer;
+  text-transform: capitalize;
 }
 .main-content .sections .header-section .related .list .item:first-child {
   background-color: transparent;
