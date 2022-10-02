@@ -37,6 +37,7 @@
 
     &+label {
       cursor: pointer;
+
       &::before {
         content: " ";
         color: $color-primary;
@@ -66,4 +67,43 @@
   list-style-type: none;
   padding: 0;
   margin: 0;
+}
+
+@mixin screen-sm {
+  @media (max-width: #{$screen-width-sm - 1px}) {
+    @content;
+  }
+}
+
+@mixin screen-md {
+  @media (max-width: #{$screen-width-md}) {
+    @content;
+  }
+}
+
+@mixin screen-lg {
+  @media (max-width: #{$screen-width-lg}) {
+    @content;
+  }
+}
+
+@mixin screen-xl {
+  @media (min-width: #{$screen-width-xl}) {
+    @content;
+  }
+}
+
+@mixin screen-responsive($width) {
+  @if $width>=$screen-width-xl {
+    @media (min-width: $width) {
+      @content;
+    }
+  }
+
+  @else {
+    @media (max-width: #{$width}) {
+      @content;
+    }
+  }
+
 }

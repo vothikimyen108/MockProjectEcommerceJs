@@ -20,6 +20,12 @@
         height: 2rem;
         top: calc(50% - 0.59em);
         left: 0px;
-        margin-left: 1rem;
+        @include screen-xl {
+            margin-left: 3%;
+        }
+       
+        
     }
+
+   
 }

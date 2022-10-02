@@ -5,20 +5,23 @@
         list-style-type: none;
         display: flex;
         padding: 0;
-
+        flex-wrap: wrap;
+        flex-direction: row;
+        gap: 12px;
         .item {
             @include formatText(16px, black, $txt-font-default);
-            margin-right: 1rem;
-            padding: 0.8rem 2rem;
+        
+            padding: 0.5rem 1rem;
             border-radius: 60px;
             background-color: #EDEDF0;
             letter-spacing: 1px;
             cursor: pointer;
-            text-transform: capitalize;
+           
+          
 
             &:first-child {
                 background-color: transparent;
-                padding: 0.8rem 0;
+                // padding: 0.8rem 0;
             }
         }
     }

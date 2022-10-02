@@ -3,6 +3,12 @@
     width: 100%;
     justify-content: space-between;
 
+    @include screen-responsive(970px){
+        flex-direction: column-reverse;
+        gap: 15px;
+    }
+
+
     .nav-sort {
         display: flex;
 
@@ -57,24 +63,37 @@
 
     .nav-pages {
         display: flex;
+        column-gap: 3rem;
+        flex-direction: row;
+        flex-wrap: wrap;
 
+        @include screen-responsive(1020px){
+            column-gap: 2rem;
+        }
+        @include screen-responsive(999px){
+            column-gap: 1rem;
+        }
+        @include screen-responsive(985px){
+            column-gap: 5px;
+        }
+        @include screen-responsive(985px){
+           gap: 1.5rem;
+        }
+ 
         .views,
         .pages {
             background-color: $bg-color-nav-pages;
             border-radius: 5px;
+            
         }
-
-        .pages {
-            margin-right: 4rem;
-
-        }
+        
+        
 
         .list {
             padding: 0;
             margin: 0;
             list-style: none;
             display: flex;
-
             .item {
                 
                 font-size: 15px;
@@ -85,6 +104,9 @@
                 letter-spacing: 1.2px;
                 color: #5A5B6A;
                 padding: 4px 14px;
+                @include screen-responsive(530px){
+                    padding: 4px 10px;
+                }
                 line-height: 2.2rem;
 
 

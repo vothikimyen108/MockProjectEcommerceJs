@@ -1,14 +1,17 @@
 .sections {
-  width: 100%;
+  width: 80%;
   padding: 1rem;
   border-radius: 6px;
   box-shadow: 0px 0px 9px -3px #5e6366;
 
+  @include screen-lg{
+    width: 100%;
+  }
   .header-section {
     @import "nav-section";
 
     @import "related";
-    
+
   }
 
   .main-section {

@@ -1,13 +1,14 @@
 .nav-left {
     width: 20%;
-    min-width: 355px;
-    max-width: 20%;
 
-  
     @import 'departments';
 
     @import 'categories';
 
     @import 'filters';
+
+    @include screen-lg{
+        display: none;
+    }
 
 }
